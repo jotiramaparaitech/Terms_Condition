@@ -182,34 +182,7 @@ const TermsAndConditions = () => {
                         Contact Information
                     </h2>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-                        {/* Bengaluru Branch */}
-                        <div className="bg-gradient-to-br from-blue-50 to-white rounded-lg sm:rounded-xl p-4 sm:p-6 border border-blue-100">
-                            <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                                <div className="p-1 sm:p-2 bg-white border border-blue-200 rounded-lg shadow-sm">
-                                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
-                                </div>
-                                <h3 className="text-lg sm:text-xl font-bold text-gray-900">Bengaluru Branch</h3>
-                            </div>
-
-                            <div className="space-y-3 sm:space-y-4">
-                                <div className="bg-white rounded-lg p-3 sm:p-4 border border-gray-200">
-                                    <p className="text-xs sm:text-sm text-gray-500 font-medium mb-1 sm:mb-2">Address</p>
-                                    <p className="text-sm sm:text-base text-gray-800">
-                                        360, Neeladri Rd,<br />
-                                        Electronic City Phase I,<br />
-                                        Bengaluru – 560100
-                                    </p>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                    <div className="bg-white rounded-lg p-3 border border-gray-200 sm:col-span-2">
-                                        <p className="text-xs text-gray-500 mb-1">Website</p>
-                                        <p className="text-sm sm:text-base text-gray-800 font-semibold">www.aparaitech.org</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                
 
                         {/* Baramati Branch */}
                         <div className="bg-gradient-to-br from-blue-50 to-white rounded-lg sm:rounded-xl p-4 sm:p-6 border border-blue-100">
@@ -238,7 +211,7 @@ const TermsAndConditions = () => {
 
                                     <div className="bg-white rounded-lg p-3 border border-gray-200">
                                         <p className="text-xs text-gray-500 mb-1">Email</p>
-                                        <p className="text-sm sm:text-base text-gray-800 font-semibold">info@aparaitech.org</p>
+                                        <p className="text-sm sm:text-base text-gray-800 font-semibold">info@aparaitechsoftware.org</p>
                                     </div>
 
                                     <div className="bg-white rounded-lg p-3 border border-gray-200 sm:col-span-2">
