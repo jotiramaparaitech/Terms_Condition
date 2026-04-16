@@ -1,167 +1,195 @@
-import React from 'react';
-import { FileText, Shield, Lock, AlertCircle, Globe, Check, MapPin } from 'lucide-react';
+import React from "react";
+import { MapPin } from "lucide-react";
 
 const TermsAndConditions = () => {
-    const [accepted, setAccepted] = React.useState(false);
+  const [accepted, setAccepted] = React.useState(false);
 
-    const companyInfo = {
-        name: "Aparaitech Software",
-        address: {
-            branch: "Mukti Complex, Near Prashaskiya Bhawan, Baramati, Pune, Maharashtra"
-        },
-        contact: {
-            email: "info@aparaitechsoftware.org",
-            phone: "+91 63643 26342",
-            website: "www.aparaitech.org"
-        }
-    };
+  const sections = [
+    {
+      id: 1,
+      title: "Acceptance of Terms",
+      highlight:
+        "By registering for, accessing, or using any part of Aparaitech Software's services, you confirm that you accept and agree to these Terms and Conditions.",
+      content:
+        "If you do not agree to these terms, please do not use our services.",
+    },
+    {
+      id: 2,
+      title: "Eligibility",
+      highlight: "You must be at least 16 years old to use our services.",
+      content:
+        "For certain services like study abroad or financial products, additional eligibility requirements may apply.",
+    },
+    {
+      id: 3,
+      title: "User Account Responsibilities",
+      highlight:
+        "You must provide accurate information and keep your account credentials secure.",
+      content:
+        "You are responsible for all activities under your account.",
+    },
+    {
+      id: 4,
+      title: "Use of Services",
+      highlight:
+        "You agree to use our services only for lawful purposes.",
+      content:
+        "You may not violate laws, defraud, harass, or harm others.",
+    },
+    {
+      id: 5,
+      title: "Live Project & Service Enrollments",
+      highlight:
+        "Enrollment in live projects or programs is subject to availability.",
+      content:
+        "All payments are non-refundable unless stated otherwise.",
+    },
+    {
+      id: 6,
+      title: "Intellectual Property",
+      highlight:
+        "All website content is the property of Aparaitech Software.",
+      content:
+        "You may not reproduce or distribute content without permission.",
+    },
+    {
+      id: 7,
+      title: "Privacy",
+      highlight:
+        "Your use of our platform is governed by our Privacy Policy.",
+      content: "We are committed to protecting your data.",
+    },
+    {
+      id: 8,
+      title: "Refund & Policy",
+      highlight:
+        "All fees paid are non-refundable and non-transferable.",
+      content:
+        "Project changes are subject to approval and availability.",
+    },
+    {
+      id: 9,
+      title: "Disclaimer",
+      highlight:
+        "Our services are provided 'as is' and 'as available'.",
+      content:
+        "We do not guarantee uninterrupted or error-free services.",
+    },
+    {
+      id: 10,
+      title: "Limitation of Liability",
+      highlight:
+        "Aparaitech Software is not liable for damages or losses.",
+      content:
+        "Including inability to use services or unauthorized access.",
+    },
+    {
+      id: 11,
+      title: "Dispute Resolution",
+      highlight:
+        "All disputes must be raised in writing.",
+      content:
+        "We aim to resolve within 7 working days.",
+    },
+    {
+      id: 12,
+      title: "Termination",
+      highlight:
+        "We may suspend or terminate access at any time.",
+      content:
+        "Especially in cases of misuse.",
+    },
+    {
+      id: 13,
+      title: "Governing Law",
+      highlight:
+        "These Terms are governed by the laws of India.",
+      content:
+        "Jurisdiction: Bengaluru, Karnataka.",
+    },
+    {
+      id: 14,
+      title: "Changes to Terms",
+      highlight:
+        "We may update Terms at any time.",
+      content:
+        "Continued use means acceptance.",
+    },
+  ];
 
-    const sections = [
-        {
-            id: 1,
-            title: "Acceptance of Terms & Conditions",
-            highlight: "By registering for, accessing, or using any part of our Services, you confirm that you accept and agree to be legally bound by these Terms and Conditions.",
-            content: "If you are agreeing on behalf of an organization, you represent that you have the authority to bind that entity. If you do not agree to all of these terms, please do not use our Services."
-        },
-        {
-            id: 2,
-            title: "Eligibility",
-            highlight: "You must be at least 16 years old to use our Services.",
-            content: "For certain services like study abroad or financial products, additional eligibility requirements may apply as specified in the service description."
-        },
-        {
-            id: 3,
-            title: "User Account Responsibilities",
-            highlight: "When creating an account on our platform, you agree to provide accurate and complete information and keep your login credentials secure.",
-            content: "You are responsible for all activities that occur under your account."
-        },
-        {
-            id: 4,
-            title: "Use of Services",
-            highlight: "You agree to use our services only for lawful purposes.",
-            content: "You may not violate any laws, defraud, or misuse the platform."
-        },
-        {
-            id: 5,
-            title: "Live Project & Service Enrollments",
-            highlight: "Enrollment in Live Projects or programs is subject to availability and verification.",
-            content: "Payment once made is strictly non-refundable unless stated otherwise."
-        },
-        {
-            id: 6,
-            title: "Intellectual Property",
-            highlight: "All content on this website is the property of Aparaitech Software.",
-            content: "You may not reproduce or distribute any content without permission."
-        },
-        {
-            id: 7,
-            title: "Privacy",
-            highlight: "Use of our website is also governed by our Privacy Policy.",
-            content: "We ensure proper handling of your data."
-        },
-        {
-            id: 8,
-            title: "Refund Policy",
-            highlight: "All fees paid are non-refundable and non-transferable.",
-            content: "Changes can be requested under specific conditions."
-        },
-        {
-            id: 9,
-            title: "Disclaimer",
-            highlight: "Services are provided 'as is' without guarantees.",
-            content: "We are not liable for interruptions or errors."
-        },
-        {
-            id: 10,
-            title: "Limitation of Liability",
-            highlight: "We are not liable for unauthorized access or damages.",
-            content: "Use services at your own risk."
-        },
-        {
-            id: 11,
-            title: "Dispute Resolution",
-            highlight: "Disputes must be raised in writing.",
-            content: "We resolve issues within 7 working days."
-        },
-        {
-            id: 12,
-            title: "Termination",
-            highlight: "We may terminate access at any time.",
-            content: "Especially in case of misuse."
-        },
-        {
-            id: 13,
-            title: "Governing Law",
-            highlight: "These terms are governed by Indian laws.",
-            content: "Jurisdiction: Udaipur, Rajasthan."
-        },
-        {
-            id: 14,
-            title: "Changes to Terms",
-            highlight: "Terms may be updated anytime.",
-            content: "Continued use implies acceptance."
-        }
-    ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white px-4 py-6">
 
-    return (
-        <div className="min-h-screen bg-gray-50 py-6 px-4">
-            <div className="max-w-4xl mx-auto">
+      {/* HEADER */}
+      <header className="max-w-5xl mx-auto mb-10 text-center animate-fade-in">
+        <h1 className="text-4xl font-extrabold tracking-wide">
+          Terms & Conditions
+        </h1>
+        <p className="text-gray-400 mt-2 text-lg">
+          Aparaitech Software – Legal Agreement & Policies
+        </p>
+      </header>
 
-                {/* Header */}
-                <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-gray-900">Terms & Conditions</h1>
-                    <p className="text-gray-600 mt-2">
-                        Welcome to Aparaitech Software. Please review our terms carefully.
-                    </p>
-                </div>
+      {/* CONTENT */}
+      <div className="max-w-5xl mx-auto space-y-6">
+        {sections.map((section) => (
+          <div
+            key={section.id}
+            className="bg-gray-800/70 backdrop-blur-md border border-gray-700 p-6 rounded-2xl shadow-lg 
+            hover:scale-[1.02] transition-all duration-300 ease-in-out"
+          >
+            <h2 className="text-xl font-bold mb-2 text-white">
+              {section.id}. {section.title}
+            </h2>
+            <p className="text-blue-400 font-semibold mb-2">
+              {section.highlight}
+            </p>
+            <p className="text-gray-300">{section.content}</p>
+          </div>
+        ))}
+      </div>
 
-                {/* Sections */}
-                <div className="space-y-6">
-                    {sections.map((section) => (
-                        <div key={section.id} className="bg-white p-6 rounded-xl shadow">
-                            <h2 className="text-xl font-bold mb-2">
-                                {section.id}. {section.title}
-                            </h2>
-                            <p className="font-semibold text-blue-600 mb-2">
-                                {section.highlight}
-                            </p>
-                            <p className="text-gray-700">{section.content}</p>
-                        </div>
-                    ))}
-                </div>
+      {/* CONTACT */}
+      <div className="max-w-5xl mx-auto mt-12 bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700">
+        <h2 className="text-xl font-bold mb-4 text-center">
+          Contact Information
+        </h2>
 
-                {/* Contact Information (Only Baramati) */}
-                <div className="mt-10 bg-white p-6 rounded-xl shadow">
-                    <h2 className="text-xl font-bold mb-4 text-center">
-                        Contact Information
-                    </h2>
+        <div className="bg-gray-900 p-4 rounded-lg">
+          <div className="flex items-center gap-2 mb-3">
+            <MapPin className="text-blue-400" />
+            <h3 className="font-bold">Baramati Branch</h3>
+          </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                        <div className="flex items-center gap-2 mb-3">
-                            <MapPin className="text-blue-600" />
-                            <h3 className="font-bold">Baramati Branch</h3>
-                        </div>
+          <p className="text-gray-300 mb-2">
+            Mukti Complex,<br />
+            Near Prashaskiya Bhawan,<br />
+            Baramati, Pune, Maharashtra
+          </p>
 
-                        <p className="text-gray-700 mb-2">
-                            Mukti Complex,<br />
-                            Near Prashaskiya Bhawan,<br />
-                            Baramati, Pune, Maharashtra
-                        </p>
-
-                        <p className="text-gray-700"><strong>Phone:</strong> +91 63643 26342</p>
-                        <p className="text-gray-700"><strong>Email:</strong> info@aparaitechsoftware.org</p>
-                        <p className="text-gray-700"><strong>Website:</strong> www.aparaitech.org</p>
-                    </div>
-                </div>
-
-                {/* Footer */}
-                <div className="text-center mt-8 text-gray-500">
-                    © {new Date().getFullYear()} Aparaitech Software. All rights reserved.
-                </div>
-
-            </div>
+          <p className="text-gray-300">
+            <strong>Phone:</strong> +91 63643 26342
+          </p>
+          <p className="text-gray-300">
+            <strong>Email:</strong> info@aparaitechsoftware.org
+          </p>
+          <p className="text-gray-300">
+            <strong>Website:</strong> www.aparaitech.org
+          </p>
         </div>
-    );
+      </div>
+
+      {/* FOOTER */}
+      <footer className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-400">
+        <p>
+          © {new Date().getFullYear()} Aparaitech Software. All rights reserved.
+        </p>
+        <p className="text-sm mt-1">
+          Designed with professionalism & security in mind.
+        </p>
+      </footer>
+    </div>
+  );
 };
 
 export default TermsAndConditions;
