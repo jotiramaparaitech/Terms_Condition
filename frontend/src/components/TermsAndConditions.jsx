@@ -19,7 +19,7 @@ const TermsAndConditions = () => {
     const sections = [
         {
             id: 1,
-            title: "Acceptance of Terms",
+            title: "Acceptance of Terms & Conditions",
             highlight: "By registering for, accessing, or using any part of our Services, you confirm that you accept and agree to be legally bound by these Terms and Conditions.",
             content: "If you are agreeing on behalf of an organization, you represent that you have the authority to bind that entity. If you do not agree to all of these terms, please do not use our Services."
         },
