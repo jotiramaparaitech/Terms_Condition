@@ -180,14 +180,73 @@ const TermsAndConditions = () => {
       </div>
 
       {/* FOOTER */}
-      <footer className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-400">
-        <p>
-          © {new Date().getFullYear()} Aparaitech Software. All rights reserved.
-        </p>
-        <p className="text-sm mt-1">
-          Designed with professionalism & security in mind.
-        </p>
-      </footer>
+<footer className="bg-gray-900 text-gray-300 mt-12">
+  <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    {/* Company Info */}
+    <div>
+      <h2 className="text-xl font-semibold text-white mb-3">
+        Aparaitech Software
+      </h2>
+      <p className="text-sm text-gray-400">
+        Building innovative solutions with a focus on quality, security, and performance.
+      </p>
+    </div>
+
+    {/* Quick Links */}
+    <div>
+      <h3 className="text-lg font-semibold text-white mb-3">
+        Quick Links
+      </h3>
+      <ul className="space-y-2 text-sm">
+        <li><a href="/" className="hover:text-white transition">Home</a></li>
+        <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+        <li><a href="/services" className="hover:text-white transition">Services</a></li>
+        <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    {/* Contact Info */}
+    <div>
+      <h3 className="text-lg font-semibold text-white mb-3">
+        Contact Us
+      </h3>
+      <p className="text-sm text-gray-400">
+        Mukti Complex, Near Prashaskiya Bhawan,<br />
+        Baramati, Pune, Maharashtra
+      </p>
+      <p className="text-sm mt-2">📧 info@aparaitechsoftware.org</p>
+      <p className="text-sm">📞 +91 63643 26342</p>
+    </div>
+
+    {/* Map Section */}
+    <div>
+      <h3 className="text-lg font-semibold text-white mb-3">
+        Our Location
+      </h3>
+      <div className="w-full h-40 rounded-lg overflow-hidden border border-gray-700 shadow-md">
+        <iframe
+          title="Aparaitech Software Location"
+          src="https://maps.google.com/maps?q=Aparaitech%20Software%20Baramati&z=16&output=embed"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  {/* Bottom Bar */}
+  <div className="border-t border-gray-700 py-4 text-center text-sm text-gray-500">
+    © {new Date().getFullYear()} Aparaitech Software. All rights reserved. <br />
+    <span className="text-gray-400">
+      Designed with professionalism & security in mind.
+    </span>
+  </div>
+</footer>
     </div>
   );
 };
