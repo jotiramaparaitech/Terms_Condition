@@ -150,34 +150,54 @@ const TermsAndConditions = () => {
       </div>
 
       {/* CONTACT */}
-      <div className="max-w-5xl mx-auto mt-12 bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700">
-        <h2 className="text-xl font-bold mb-4 text-center">
-          Contact Information
-        </h2>
+<div className="max-w-5xl mx-auto mt-12 bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
 
-        <div className="bg-gray-900 p-4 rounded-lg">
-          <div className="flex items-center gap-2 mb-3">
-            <MapPin className="text-blue-400" />
-            <h3 className="font-bold">Baramati Branch</h3>
-          </div>
+  {/* Heading */}
+  <h2 className="text-2xl font-semibold mb-6 text-center text-white tracking-wide">
+    Contact Information
+  </h2>
 
-          <p className="text-gray-300 mb-2">
-            Mukti Complex,<br />
-            Near Prashaskiya Bhawan,<br />
-            Baramati, Pune, Maharashtra
-          </p>
+  {/* Card */}
+  <div className="bg-gray-900 p-6 rounded-xl border border-gray-700">
 
-          <p className="text-gray-300">
-            <strong>Phone:</strong> +91 63643 26342
-          </p>
-          <p className="text-gray-300">
-            <strong>Email:</strong> info@aparaitechsoftware.org
-          </p>
-          <p className="text-gray-300">
-            <strong>Website:</strong> www.aparaitech.org
-          </p>
-        </div>
-      </div>
+    {/* Header */}
+    <div className="flex items-center gap-3 mb-4">
+      <MapPin className="text-blue-400" size={20} />
+      <h3 className="text-lg font-semibold text-white">
+        Baramati Branch
+      </h3>
+    </div>
+
+    {/* Address */}
+    <p className="text-gray-400 mb-4 leading-relaxed text-sm">
+      Mukti Complex,<br />
+      Near Prashaskiya Bhawan,<br />
+      Baramati, Pune, Maharashtra
+    </p>
+
+    {/* Contact Info */}
+    <div className="space-y-2 text-sm">
+      <p className="text-gray-300">
+        <span className="text-gray-500 font-medium">Phone:</span> +91 63643 26342
+      </p>
+      <p className="text-gray-300">
+        <span className="text-gray-500 font-medium">Email:</span> info@aparaitechsoftware.org
+      </p>
+      <p className="text-gray-300">
+        <span className="text-gray-500 font-medium">Website:</span>{" "}
+        <a
+          href="https://www.aparaitech.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:underline"
+        >
+          www.aparaitech.org
+        </a>
+      </p>
+    </div>
+
+  </div>
+</div>
 
       {/* FOOTER */}
 <footer className="bg-gray-900 text-gray-300 mt-12">
