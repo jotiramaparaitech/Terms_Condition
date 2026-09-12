@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Aparaitech Software - Terms & Conditions Portal
 
 A legal and professional **Terms & Conditions Web Portal** for **Aparaitech Software** (Pune Headquarters), designed in modern SaaS layout with:
@@ -52,6 +51,3 @@ npm run build
 - **Phone Support:** `+91 9158852129`
 - **Official Email:** `info@ai.aparaitech.org`
 - **Website:** `www.aparaitech.org`
-=======
-# Terms_Condition
->>>>>>> a36a4ef79b7f03f70de8bd06715e8263e2b669b3

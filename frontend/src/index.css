@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -15,6 +14,3 @@
     text-rendering: optimizeLegibility;
   }
 }
-=======
-@import "tailwindcss";
->>>>>>> a36a4ef79b7f03f70de8bd06715e8263e2b669b3
